@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/7.8 reset.css" />
+		<script>
+			(function(doc, win) {
+				var docEl = doc.documentElement,
+					resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+					recalc = function() {
+						window.clientWidth = docEl.clientWidth;
+						if(!window.clientWidth) return;
+						docEl.style.fontSize = 20 * (window.clientWidth / 640) + 'px';
+						window.base = 20 * (window.clientWidth / 640);
+						// document.getElementById('video_mp4').width = window.base*28.8;
+						// document.getElementById('video_mp4').height = window.base*16.1;
+					};
+
+				try {
+					recalc();
+				} catch(e) {
+
+				}
+				if(!doc.addEventListener) return;
+				win.addEventListener(resizeEvt, recalc, false);
+				doc.addEventListener('DOMContentLoaded', recalc, false);
+			})(document, window);
+			window.canvasWidth = document.documentElement.clientWidth;
+			window.canvasHeight = document.documentElement.clientHeight;
+		</script>
+		<link rel="stylesheet" type="text/css" href="css/loading.css"/>
+		<style type="text/css">
+		</style>
+	</head>
+
+	<body>
+		<!--loading页面-->
+		<div id="loading">
+			<!--loading页面上部黑白块图片-->
+			<img class="bgimg" src="img/loading/图层-1.png" />
+			<!--卡车图片-->
+			<img class="truck" src="img/loading/组-6.png" />
+			<!--进度条-->
+			<div class="progress_bar">
+				<!--进度格-->
+				<!--<div class="progress_sec"></div>
+				<div class="progress_sec"></div>-->
+			</div>
+			<!--预加载百分比-->
+			<p class="progress_percent"></p>
+		</div>
+		<!--首页-->
+		<div id="home_page">
+			<!--左上角logo-->
+			<img class="logo" src="img/loading/logo.png"/>
+			<!--主题图片:"图雅诺杯 掌上勒芒 第二季"-->
+			<img class="theme" src="img/loading/主题.png" alt="" />
+			<!--卡车图片-->
+			<img class="home_truck" src="img/loading/车.png" alt="" />
+			<!--三个按钮:"游戏规则" "开始游戏" "排行榜"-->
+			<!--"游戏规则"-->
+			<img class="btn_rule" src="img/loading/游戏规则.png" alt="" />
+			<!--"开始游戏"-->
+			<img class="btn_start" src="img/loading/开始游戏.png" alt="" />
+			<!--"排行榜"-->
+			<img class="btn_list" src="img/loading/排行榜btn.png"/>
+			<!--游戏规则页面-->
+			<div class="home_page_rule">
+				<!--规则图片-->
+				<img class="home_page_game_rule" src="img/loading/组-9.png"/>
+				<!--下面两张图片组成关闭按钮-->
+				<img class="close_bg" src="img/loading/关闭背景.png"/>
+				<img class="close_btn" src="img/loading/形状-1-拷贝.png"/>
+			</div>
+			<!--排行榜页面(与body大小相同)-->
+			<div class="home_page_list">
+				<!--红色边框范围内的部分-->
+				<div class="paihangbang">
+					<!--排行榜标题 图片两张-->
+					<img class="home_page_list_img1" src="img/loading/排行榜.png"/>
+					<img class="home_page_list_img2" src="img/loading/Leaderboard.png"/>
+					<!--关闭按钮 图片两张-->
+
+					<img class="home_page_close_bg" src="img/loading/关闭背景.png"/>
+					<img class="home_page_close_btn" src="img/loading/形状-1-拷贝.png"/>
+					<ul>
+						<li class="liHead">
+							<p>用户</p>
+							<p>成绩</p>
+							<p>名次</p>
+						</li>
+						<hr />
+						<li class="liSec">
+							<img src="img/loading/图层-62.png"/>
+							<p class="userName" name="userName">大松树</p>
+							<p class="grade" name="grade">1400km</p>
+							<!--rank:名次-->
+							<p class="rank" name="rank">1</p>
+						</li>
+						<li class="liSec">
+							<img src="img/loading/title1.jpg"/>
+							<p class="userName" name="userName">茹俊巧</p>
+							<p class="grade" name="grade">1330km</p>
+							<!--rank:名次-->
+							<p class="rank" name="rank">2</p>
+						</li>
+						<li class="liSec">
+							<img src="img/loading/title2.jpg"/>
+							<p class="userName" name="userName">张三</p>
+							<p class="grade" name="grade">1300km</p>
+							<!--rank:名次-->
+							<p class="rank" name="rank">3</p>
+						</li>
+						<li class="liSec">
+							<img src="img/loading/title3.jpg"/>
+							<p class="userName" name="userName">李四</p>
+							<p class="grade" name="grade">1289km</p>
+							<!--rank:名次-->
+							<p class="rank" name="rank">4</p>
+						</li>
+						<li class="liSec">
+							<img src="img/loading/title4.jpg"/>
+							<p class="userName" name="userName">王五</p>
+							<p class="grade" name="grade">1100km</p>
+							<!--rank:名次-->
+							<p class="rank" name="rank">5</p>
+						</li>
+					</ul>
+				<!-- 红色边框范围内的部分-->
+				</div>
+			<!--排行榜页面(与body大小相同)-->
+			</div>
+		</div>
+	</body>
+	<script src="js/loading.js" type="text/javascript" charset="utf-8"></script>
+</html>
+
+
+
+
+
+
+
+
+
+
+

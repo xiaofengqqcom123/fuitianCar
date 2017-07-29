@@ -1,0 +1,228 @@
+/*loading*/
+#loading {
+	display: block;
+	background-color: #200101;
+}
+/*loading页面中上部黑白块图片*/
+#loading .bgimg {
+	width: 100%;
+	opacity: 0.15;
+}
+/*loading中卡车图片*/
+#loading .truck {
+	width: 17rem;
+	height: 15rem;
+	position: absolute;
+	top: 13rem;
+	left: 7rem;
+}
+/*loading中进度条*/
+#loading .progress_bar {
+	width: 25rem;
+	height: 1rem;
+	border: 0.2rem solid #f11603;
+	margin: 2rem 0 0 3.5rem;
+	transform: skewX(-30deg);
+}
+/*loading页面进度条中的进度格*/
+#loading .progress_bar .progress_sec {
+	/*width: 1rem;*/
+	height: 1rem;
+	background-color: red;
+	border-right: 10px solid #200101;
+	float: left;
+}
+/*loading页面中进度百分比*/
+#loading .progress_percent {
+	font-size: 2rem;
+	font-weight: bold;
+	color: red;
+	margin: 2rem 0 0 14rem;
+}
+/****************************************************************************/
+/*首页*/
+#home_page {
+	display: none;
+	background-image: url(../img/loading/背景.png);
+	background-size: 100% 100%;
+}
+/*首页中左上角的logo图片*/
+#home_page .logo {
+	width: 9rem;
+	height: 3rem;
+	margin: 1rem 0 0 1rem;
+}
+/*首页中的主题图片(图雅诺杯 掌上勒芒 第二季)*/
+#home_page .theme {
+	width: 30rem;
+	height: 22rem;
+	margin: 0rem 0 0 2rem;
+	/*图片的盖章效果*/
+	overflow:hidden;
+	animation: theme_ani 0.7s linear 1s forwards;
+}
+/*盖章动画*/
+@keyframes theme_ani {
+	from {
+		transform: scaleX(3) scaleY(3) translateZ(300px);
+	}
+	to {
+		transform: scaleX(1) scaleY(1) translateZ(0);
+	}
+}
+/*首页中的卡车图片*/
+#home_page .home_truck {
+	width: 30rem;
+	height: 25rem;
+	margin: 0rem 0 0 0;
+}
+/*首页中的"游戏规则"按钮*/
+#home_page .btn_rule {
+	width: 8rem;
+	height: 5rem;
+	position: absolute;
+	left: 0;
+	bottom: 5rem;
+}
+/*首页中的"开始游戏"按钮*/
+#home_page .btn_start {
+	width: 16rem;
+	height: 5rem;
+	position: absolute;
+	left: 8rem;
+	bottom: 5rem;
+}
+/*首页中的"排行榜"按钮*/
+#home_page .btn_list {
+	width: 8rem;
+	height: 5rem;
+	position: absolute;
+	right: 0;
+	bottom: 5rem;
+}
+/*点击"游戏规则按钮"后出现的页面*/
+#home_page .home_page_rule {
+	display: none;
+	background-image: url(../img/矩形-13.png);
+	background-size: 100% 100%;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+/*游戏规则内容*/
+#home_page .home_page_rule .home_page_game_rule {
+	width: 28rem;
+	height: 48rem;
+	margin: 4rem 0 0 2rem;
+	border: 5px solid red;
+}
+/*游戏规则关闭按钮*/
+#home_page .home_page_rule .close_bg,.close_btn {
+	width: 3rem;
+	height: 3rem;
+	position: absolute;
+	top: 4.5rem;
+	right: 2rem;
+}
+/*游戏排行榜*/
+#home_page .home_page_list {
+	display: none;
+	background-image: url(../img/矩形-13.png);
+	background-size: 100% 100%;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+/*游戏排行榜中的红框部分*/
+#home_page .home_page_list .paihangbang {
+	width: 30rem;
+	height: 48rem;
+	border: 0.2rem solid red;
+	margin: 3.7rem 0 0 1rem;
+	position: relative;
+}
+/*游戏排行榜中的"排行榜"图片*/
+#home_page .home_page_list .paihangbang .home_page_list_img1 {
+	width: 10rem;
+	height: 3rem;
+	position: absolute;
+	top: 1.5rem;
+	left: 10rem;
+}
+/*"排行榜"图片下面的"LEADEABOAAD"图片*/
+#home_page .home_page_list .paihangbang .home_page_list_img2 {
+	width: 10rem;
+	height: 1rem;
+	position: absolute;
+	top: 4rem;
+	left: 10rem;
+}
+/*游戏排行榜关闭按钮(背景)*/
+#home_page .home_page_list .paihangbang .home_page_close_bg {
+	width: 5rem;
+	height: 5rem;
+	position: absolute;
+	top: 0.2rem;
+	right: 0.2rem;
+}
+/*游戏排行榜关闭按钮("叉"图片)*/
+#home_page .home_page_list .paihangbang .home_page_close_btn {
+	width: 5rem;
+	height: 5rem;
+	position: absolute;
+	top: 0.2rem;
+	right: 0.2rem;
+}
+/*游戏排行榜内容*/
+#home_page .home_page_list ul {
+	width: 100%;
+	height: 40rem;
+	font-size: 2rem;
+	color: white;
+	margin: 6.5rem 0 0 0rem;
+}
+/*"用户" "成绩" "名次"*/
+#home_page .home_page_list ul .liHead {
+	width: 100%;
+	height: 4.3rem;
+}
+#home_page .home_page_list ul .liHead p {
+	float: left;
+	margin: 0.5rem 1rem 0 3.5rem;
+}
+/*游戏排行榜中信息条*/
+#home_page .home_page_list ul .liSec {
+	width: 100%;
+	height: 4.3rem;
+}
+/*游戏排行榜信息条中的用户头像*/
+#home_page .home_page_list ul .liSec img {
+	width: 3rem;
+	height: 3rem;
+	float: left;
+	margin: 0.5rem 0 0 2rem;
+}
+/*用户名*/
+#home_page .home_page_list ul .liSec .userName {
+	width: 6rem;
+	font-size: 1.4rem;
+	float: left;
+	margin: 0.5rem 0rem 0 0rem;
+}
+/*里程数和名次*/
+#home_page .home_page_list ul .liSec .grade,.rank {
+	width: 8rem;
+	font-size: 1.4rem;
+	float: left;
+	margin: 0.5rem 0rem 0 1.5rem;
+}
+#home_page .home_page_list ul hr {
+	width: 30rem;
+	height: 0.1rem;
+	background-color: red;
+}
+/***************************************************************************

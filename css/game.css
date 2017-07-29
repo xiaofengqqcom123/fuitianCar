@@ -1,0 +1,62 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+#countdown{
+	position: relative;
+	background-image: url(../img/矩形-13.png);
+	background-size: 100% 100%;
+	z-index: 2;
+}
+#countdown img{
+	width: 15rem;
+}
+#countdown_num1{
+	width: 8rem;
+	height: 8rem;
+	background: black;
+	border-radius: 50%;
+	border: 0.5rem solid red;
+	margin: 0 auto;
+	margin-top: -3rem;
+	color: white;
+	font-size: 6rem;
+	line-height: 8rem;
+}
+#countdown p{
+	color: white;
+	font-size: 1.5rem;
+	line-height: 5rem;
+}
+#countdown1{
+	position: absolute;
+	left: 25%;
+	top: 40%;
+	text-align: center;
+}
+#game{
+	display: none;
+}
+
+#countdown_time{
+	width: 8rem;
+	height: 4rem;
+	position: absolute;
+	left: 1rem;
+	top: 10rem;
+	text-align: center;
+	line-height: 4rem;
+	color: white;
+	font-size: 2rem;
+}
+#grade1{
+	width: 8rem;
+	height: 4rem;
+	position: absolute;
+	right: 1rem;
+	top: 10rem;
+	text-align: center;
+	line-height: 4rem;
+	color: white;
+	font-size: 2rem;
+}

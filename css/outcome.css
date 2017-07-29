@@ -1,0 +1,167 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+#box{
+	background-image: url(../img/成绩/图层-0.png);
+	background-size: 100% 100%;
+	position: relative;
+}
+#success1{
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/成绩/成功1.png);
+	background-size: 100% 100%;
+	position: absolute;
+}
+/*分数样式*/
+.grades{
+	font-size: 5.5rem;
+	color: white;
+	position: absolute;
+	left: 20%;
+	top: 20%;
+}
+
+#success1 #success1_tel{
+	width: 42%;
+	position: absolute;
+	left: 28%;
+	top: 75%;
+}
+#success1 .success_telWord{
+	width: 27%;
+	position: absolute;
+	left:35%;
+	top: 76%;
+}
+/*用户信息提交*/
+#message{
+	display: none;
+	width: 100%;
+	height: 100%;
+	background: black;
+	opacity: 0.95;
+	position: absolute;
+
+	opacity: 0.7;
+}
+#message .kuang{
+	width: 90%;
+	height: 40%;
+	position: absolute;
+	left: 5%;
+	top: 35%;
+	border:3px solid red;
+	background: black;
+	background-image: url(../img/成绩/组-4.png);
+	background-size: 100% 100%;
+}
+/*关闭按钮*/
+#message .kuang #closeImg{
+	float: right;
+	margin: 0.2rem;
+	width: 12%;
+}
+/*清除浮动*/
+/*#message .kuang:after{
+	content: '';
+	clear: both;
+	display: block;
+}*/
+#message .kuang .messageDiv{
+	color: white;
+	font-size: 2rem;
+	margin-left: 3rem;
+	height: 20%;
+}
+#message .kuang .x{
+	font-size: 3rem;
+	color: white;
+	position: absolute;
+	top: 0.4rem;
+	right: 0.9rem;
+}
+#message .kuang .messageDiv1{
+	margin-top: 2rem;
+}
+#message .kuang .messageDiv span{
+	width: 30%;
+	display: inline-block;
+}
+#message .kuang .messageDiv input{
+	width: 50%;
+	height: 2.5rem;
+	font-size: 1.5rem;
+	background: black;
+	color: white;
+}
+#message .kuang #submit{
+	margin-left: 25%;
+	margin-top: 10%;
+}
+#share{
+	display: none;
+	width: 100%;
+	height: 100%;
+	background: black;
+	opacity: 0.9;
+	position:relative;
+}
+#share #shareTu{
+	position: absolute;
+	right: 0;
+	top: 1rem;
+	width: 55%;
+}
+#share #shareWord{
+	position: absolute;
+	right: 2rem;
+	top: 22rem;
+	width: 42%;
+}
+#defeat{
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/成绩/失败1.png);
+	background-size: 100% 100%;
+}
+#defeat #again{
+	width: 40%;
+	position: absolute;
+	right: 0;
+	bottom: 13rem;
+}
+#defeat #ranking_list{
+	width: 40%;
+	position: absolute;
+	right: 0;
+	bottom: 7rem;
+}
+#defeat #defeat_grade{
+	margin-top: 4rem;
+}
+#success2{
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-image: url(img/成绩/成功1.png);
+	background-size: 100% 100%;
+	position: relative;
+}
+/*分数样式*/
+
+#success2 #success2Tel{
+	width: 42%;
+	position: absolute;
+	left: 28%;
+	top: 75%;
+}
+#success2 .success2TelWord{
+	width: 27%;
+	position: absolute;
+	left:35%;
+	top: 76%;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,maximum-scale=1.0">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/game.css"/>
+		<script type="text/javascript">
+			(function (doc, win) {
+	            var docEl = doc.documentElement,
+	                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	                    recalc = function () {
+	                        window.clientWidth = docEl.clientWidth;
+	                        if (!window.clientWidth) return;
+	                        docEl.style.fontSize = 20 * (window.clientWidth / 640) + 'px';
+	                        window.base = 20 * (window.clientWidth / 640);
+	                    };
+	            try {
+	                recalc();
+	            } catch (e) {
+	            		
+	            }
+	            if (!doc.addEventListener) return;
+	            win.addEventListener(resizeEvt, recalc, false);
+	            doc.addEventListener('DOMContentLoaded', recalc, false);
+	        })(document, window);
+	        // 设置canvas的宽度为屏幕宽度、宽度为屏幕高度
+	        window.canvasWidth = document.documentElement.clientWidth;
+	        window.canvasHeight = document.documentElement.clientHeight;
+		</script>
+	</head>
+	<body>
+		<canvas id="game">
+			
+		</canvas>
+		<div id="countdown_time">30</div>
+		<div id="grade1">0</div>
+		<div id="countdown">
+			<div id="countdown1">
+				<img src="img/游戏页/1085581_zcool.com.cn.png"/>
+				<div id="countdown_num1"></div>
+				<p>长按汽车,控制汽车方向</p>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/rule.js"></script>
+	<script type="text/javascript" src="js/sportscar.js"></script>
+	<script type="text/javascript" src="js/prop.js"></script>
+	<script type="text/javascript" src="js/mycar.js"></script>
+	<script type="text/javascript" src="js/game_background.js"></script>
+	<script type="text/javascript" src="js/countdown.js"></script>
+	<script type="text/javascript" src="js/loading.js"></script>
+	<script type="text/javascript">
+		var countdown = document.getElementById("countdown");
+		var game = document.getElementById("game");
+		var countdown_time1 = document.getElementById("countdown_time");
+		var grade1 = document.getElementById("grade1");
+		var context = game.getContext("2d");
+		var countdown_num = 3;
+		var timer1 = null;
+		var MYCARWIDHT = 94;
+		var MYCARHEIGHT = 173;
+		var countdown_time = 30;
+		var grade = 0;
+		var timer2 = null;
+		
+		game.width = document.documentElement.clientWidth;
+		game.height = document.documentElement.clientHeight;
+		countdown.style.width = document.documentElement.clientWidth + "px" || document.body.clientWidth + 'px';
+		countdown.style.height = document.documentElement.clientHeight + "px" || document.body.clientHeight + 'px';
+		
+		
+		var background1 = new BackgroundClass();
+		var mycar1 = new MyCarClass();
+		var prop1 = new PropMoveClass();
+		var car1 = new SportsCarMove();
+		mycar1.mycarMove(mycar1);
+		var rule1 = new RuleClass();
+		
+		
+		setTimeout(function (){
+			background1.drawBackground();
+			background1.drawAdver();
+			timer1 = setInterval(function (){
+				context.clearRect(0,0,game.width,game.height);
+				background1.backgroundMove();
+				prop1.propMove(background1);
+				car1.sportsCarMove(background1);
+				mycar1.drawMyCar();
+				background1.advertMove();
+				rule1.myCarSportsCarPZ(mycar1,car1);
+				rule1.mycarPropPZ(mycar1,prop1,background1);
+				grade1.innerHTML = grade;
+			},30);
+
+			timer2 = setInterval(function (){
+				countdown_time --;
+				countdown_time1.innerHTML = countdown_time;
+				if(countdown_time <= 0){
+					clearInterval(timer2);
+					timer2 = null;
+					clearInterval(timer1);
+					timer1 = null;
+
+					// session存储分数
+					var mySession = window.sessionStorage;
+					mySession.setItem('grade',grade);
+					grade = 0;
+					window.open("outcome.html","_self");
+				}
+			},1000);
+		},3000);
+		
+
+
+		
+		
+		
+	</script>
+</html>

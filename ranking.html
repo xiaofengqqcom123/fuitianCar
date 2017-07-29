@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>排行榜</title>
+    <link rel="stylesheet" type="text/css" href="css/7.8 reset.css" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,maximum-scale=1.0">
+    <style>
+        .close {
+            width: 4.5rem;
+            height: 4.5rem;
+            position: absolute;
+            top: 0.2rem;
+            right: 0.2rem;
+            background: red;
+            text-align: center;
+        }
+        .closeImg {
+            width: 80%;
+            height: 80%;
+            line-height: 100%;
+        }
+        /*"用户" "成绩" "名次"*/
+        .home_page_list ul .liHead {
+            width: 100%;
+            height: 1.3rem;
+        }
+        .home_page_list ul .liHead p {
+            float: left;
+            margin: 0.5rem 1rem 0 3.5rem;
+        }
+        /*游戏排行榜中信息条*/
+        .home_page_list ul .liSec {
+            width: 100%;
+            height: 4.3rem;
+        }
+        /*游戏排行榜信息条中的用户头像*/
+        .home_page_list ul .liSec img {
+            width: 3rem;
+            height: 3rem;
+            float: left;
+            margin: 0.5rem 0 0 2rem;
+        }
+        /*用户名*/
+        .home_page_list ul .liSec .userName {
+            width: 6rem;
+            font-size: 1.4rem;
+            float: left;
+            margin: 0.5rem 0rem 0 0rem;
+        }
+        /*里程数和名次*/
+        .home_page_list ul .liSec .grade,.rank {
+            width: 8rem;
+            font-size: 1.4rem;
+            float: left;
+            margin: 0.5rem 0rem 0 1.5rem;
+        }
+        .home_page_list ul hr {
+            width: 30rem;
+            height: 0.1rem;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="home_page_list">
+    <!--红色边框范围内的部分-->
+    <div class="paihangbang">
+        <!--排行榜标题 图片两张-->
+        <img class="home_page_list_img1" src="img/loading/排行榜.png"/>
+        <img class="home_page_list_img2" src="img/loading/Leaderboard.png"/>
+        <!--关闭-->
+        <div class="close">
+            <img class="closeImg" src="img/loading/形状-1-拷贝.png"/>
+        </div>
+        <ul>
+            <li class="liHead">
+                <p>用户</p>
+                <p>成绩</p>
+                <p>名次</p>
+            </li>
+            <hr/>
+            <li class="liSec">
+                <img src="img/loading/图层-62.png"/>
+                <p class="userName" name="userName">大松树</p>
+                <p class="grade" name="grade">1400km</p>
+                <!--rank:名次-->
+                <p class="rank" name="rank">1</p>
+            </li>
+            <li class="liSec">
+                <img src="img/loading/title1.jpg"/>
+                <p class="userName" name="userName">茹俊巧</p>
+                <p class="grade" name="grade">1330km</p>
+                <!--rank:名次-->
+                <p class="rank" name="rank">2</p>
+            </li>
+            <li class="liSec">
+                <img src="img/loading/title2.jpg"/>
+                <p class="userName" name="userName">张三</p>
+                <p class="grade" name="grade">1300km</p>
+                <!--rank:名次-->
+                <p class="rank" name="rank">3</p>
+            </li>
+            <li class="liSec">
+                <img src="img/loading/title3.jpg"/>
+                <p class="userName" name="userName">李四</p>
+                <p class="grade" name="grade">1289km</p>
+                <!--rank:名次-->
+                <p class="rank" name="rank">4</p>
+            </li>
+            <li class="liSec">
+                <img src="img/loading/title4.jpg"/>
+                <p class="userName" name="userName">王五</p>
+                <p class="grade" name="grade">1100km</p>
+                <!--rank:名次-->
+                <p class="rank" name="rank">5</p>
+            </li>
+        </ul>
+        <!-- 红色边框范围内的部分-->
+    </div>
+    <!--排行榜页面(与body大小相同)-->
+</div>
+
+</body>
+<script type="text/javascript" src="js/rem.js"></script>
+<script src="js/loading.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    var close = document.getElementsByClassName('close')[0];
+//    点击关闭，页面跳转
+    close.addEventListener('click',function () {
+        window.open('main.html','_self');
+    })
+</script>
+</html>
