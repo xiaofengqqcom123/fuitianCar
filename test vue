@@ -1,0 +1,41 @@
+<template>
+  <div>
+    <div>儿子呀儿子呀</div>
+    <p>{{names}}</p>
+    <el-button>{{names}}</el-button>
+  </div>
+</template>
+<script>
+  import ElButton from '../../../node_modules/element-ui/packages/button/src/button'
+  export default {
+    components: { ElButton },
+    porps: {
+      names: String
+    },
+    beforeCreate () {
+      console.log('我是子组件的beforeCreat啊')
+    },
+    created () {
+      console.log('儿子中的mount啦啦啦啦！！！！', this.names)
+    },
+    beforeMount () {
+      console.log('儿子中的beforeMountlallalal！！！', this.names)
+    },
+    mounted () {
+      console.log('儿子中的mount')
+    },
+    beforeUpdate () {
+      console.log('儿子中的beforeupdate')
+    },
+    updated () {
+      console.log('儿子中的update')
+    }
+  }
+</script>
+<style scoped>
+  div {
+    width: 100px;
+    height: 100px;
+    background: darkgreen;
+  }
+</style>
