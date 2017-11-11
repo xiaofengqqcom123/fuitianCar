@@ -1,0 +1,60 @@
+<template>
+  <div>
+    <div>父组件呀</div>
+    <p>{{name}}</p>
+    <el-button @click="clickFun()">点我</el-button>
+    <son v-bind:names='name'></son>
+  </div>
+</template>
+<script>
+  import ElButton from '../../../node_modules/element-ui/packages/button/src/button'
+  import Son from '@/views/gantt/son.vue'
+  export default {
+    name: 'test',
+    components: { ElButton, Son },
+    data () {
+      return {
+        name: '嘎嘎嘎'
+      }
+    },
+    beforeCreate () {
+      setTimeout(function () {
+        console.log('定时器中的beforeCreate')
+      }, 1000)
+    },
+    created () {
+      console.log('created啦啦啦啦！！！！')
+    },
+    beforeMount () {
+      console.log('beforeMountlallalal！！！')
+    },
+    mounted () {
+      console.log('mount')
+    },
+    beforeUpdate () {
+      console.log('beforeupdate')
+    },
+    updated () {
+      console.log('update')
+    },
+    methods: {
+      clickFun () {
+        console.log('zou')
+        let time = new Date()
+        this.name = time
+      }
+    }
+  }
+</script>
+<style scoped>
+  div {
+    width: 100px;
+    height: 100px;
+    background: darkgreen;
+  }
+  p {
+    width: 100px;
+    height: 100px;
+    background: red;
+  }
+</style>
